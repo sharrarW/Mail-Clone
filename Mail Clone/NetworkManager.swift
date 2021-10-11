@@ -24,7 +24,12 @@ struct NetworkManager {
                 
                 if let data = data {
                     let mail = try? JSONDecoder().decode(Mail.self, from: data)
-                    print("messages", mail?.messages ?? [])
+                    
+                    for message in mail?.messages ?? [] {
+                        print(message)
+                        print()
+                    }
+                 
                 }
             }.resume()
         } 

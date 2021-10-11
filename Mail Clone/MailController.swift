@@ -19,3 +19,16 @@ class MailController: UITableViewController {
 
 }
 
+extension MailController {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell else {
+            fatalError("Unable to dequeue reusable cell with an identifier \"messageCell.\"")
+        }
+//        cell.message = message
+        return cell
+    }
+}
+

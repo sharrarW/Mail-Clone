@@ -16,13 +16,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="WTO-nb-YsJ">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="133" id="WTO-nb-YsJ" customClass="MessageCell" customModule="Mail_Clone" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="133"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTO-nb-YsJ" id="Lxh-XQ-dx2">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="133"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Sender" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bH-Sb-7QV">
+                                            <rect key="frame" x="20" y="19" width="288" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.75" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQ2-Zq-ueU">
+                                            <rect key="frame" x="20" y="43" width="374" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thanks for joining, Hulu! Check out our latest episodes of your favorite shows at any time of the day." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HD0-Cz-Cbv">
+                                            <rect key="frame" x="20" y="63" width="374" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10:00 AM " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DU6-qY-atJ">
+                                            <rect key="frame" x="324" y="22" width="70" height="18"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="2bH-Sb-7QV" firstAttribute="top" secondItem="Lxh-XQ-dx2" secondAttribute="topMargin" constant="8" id="7Hj-pK-a7H"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="HD0-Cz-Cbv" secondAttribute="trailing" id="8Gr-2f-ROW"/>
+                                        <constraint firstItem="HD0-Cz-Cbv" firstAttribute="leading" secondItem="JQ2-Zq-ueU" secondAttribute="leading" id="ENC-Ya-iYb"/>
+                                        <constraint firstItem="JQ2-Zq-ueU" firstAttribute="trailing" secondItem="HD0-Cz-Cbv" secondAttribute="trailing" id="Jqk-yc-qgq"/>
+                                        <constraint firstItem="DU6-qY-atJ" firstAttribute="trailing" secondItem="HD0-Cz-Cbv" secondAttribute="trailing" id="LJW-Hg-nWQ"/>
+                                        <constraint firstItem="HD0-Cz-Cbv" firstAttribute="top" secondItem="JQ2-Zq-ueU" secondAttribute="bottom" constant="2" id="MD1-5i-YA4"/>
+                                        <constraint firstItem="DU6-qY-atJ" firstAttribute="leading" secondItem="2bH-Sb-7QV" secondAttribute="trailing" constant="16" id="RdI-7I-FOo"/>
+                                        <constraint firstItem="JQ2-Zq-ueU" firstAttribute="top" secondItem="2bH-Sb-7QV" secondAttribute="bottom" id="TXD-ug-jw2"/>
+                                        <constraint firstItem="DU6-qY-atJ" firstAttribute="centerY" secondItem="2bH-Sb-7QV" secondAttribute="centerY" id="UUf-B6-bAi"/>
+                                        <constraint firstItem="JQ2-Zq-ueU" firstAttribute="leading" secondItem="2bH-Sb-7QV" secondAttribute="leading" id="YcV-hT-LHe"/>
+                                        <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="HD0-Cz-Cbv" secondAttribute="bottom" constant="8" id="jak-66-8d8"/>
+                                        <constraint firstItem="2bH-Sb-7QV" firstAttribute="leading" secondItem="Lxh-XQ-dx2" secondAttribute="leadingMargin" id="lsX-sE-jE2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="senderLabel" destination="2bH-Sb-7QV" id="ULg-zG-eaw"/>
+                                    <outlet property="subjectLabel" destination="JQ2-Zq-ueU" id="KJD-MP-HRV"/>
+                                    <outlet property="timeLabel" destination="DU6-qY-atJ" id="vmM-bw-T1V"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
