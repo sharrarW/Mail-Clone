@@ -18,13 +18,14 @@ struct NetworkManager {
         return baseUrl + endPoint.rawValue
     }
     
-    static func fetchMailMessages() {
+    static func fetchMailMessages(_ completion: @escaping ([Mail.Message]) -> Void) {
         if let url = URL(string: urlString(for: .mailMessages)) {
             URLSession.shared.dataTask(with: url) { (data, response, error) in
                 
                 if let data = data {
                     let mail = try? JSONDecoder().decode(Mail.self, from: data)
                     
+                    completion(mail?.messages ?? [])
                     for message in mail?.messages ?? [] {
                         print(message)
                         print()

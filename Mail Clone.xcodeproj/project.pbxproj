@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F0DCE1D2715527300C22236 /* MessageDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F0DCE1C2715527300C22236 /* MessageDetailsViewController.swift */; };
 		2F2D74A427140887003C1AE8 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2D74A327140887003C1AE8 /* MessageCell.swift */; };
+		2F5E139E2715339500F2894C /* DateFormatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5E139D2715339500F2894C /* DateFormatExtension.swift */; };
 		2FD60AEC2713D93800D65794 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD60AEB2713D93800D65794 /* AppDelegate.swift */; };
 		2FD60AEE2713D93800D65794 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD60AED2713D93800D65794 /* SceneDelegate.swift */; };
 		2FD60AF02713D93800D65794 /* MailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD60AEF2713D93800D65794 /* MailController.swift */; };
@@ -19,7 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F0DCE1C2715527300C22236 /* MessageDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailsViewController.swift; sourceTree = "<group>"; };
 		2F2D74A327140887003C1AE8 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		2F5E139D2715339500F2894C /* DateFormatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatExtension.swift; sourceTree = "<group>"; };
 		2FD60AE82713D93800D65794 /* Mail Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mail Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FD60AEB2713D93800D65794 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FD60AED2713D93800D65794 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5E139B2715336100F2894C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2F5E139D2715339500F2894C /* DateFormatExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2FD60ADF2713D93800D65794 = {
 			isa = PBXGroup;
 			children = (
@@ -62,11 +74,13 @@
 		2FD60AEA2713D93800D65794 /* Mail Clone */ = {
 			isa = PBXGroup;
 			children = (
+				2F5E139B2715336100F2894C /* Extensions */,
 				2F2D74A327140887003C1AE8 /* MessageCell.swift */,
 				2FD60AEB2713D93800D65794 /* AppDelegate.swift */,
 				2FD60AED2713D93800D65794 /* SceneDelegate.swift */,
 				2FD60AEF2713D93800D65794 /* MailController.swift */,
 				2FD60AF12713D93800D65794 /* Main.storyboard */,
+				2F0DCE1C2715527300C22236 /* MessageDetailsViewController.swift */,
 				2FD60B012713EEB400D65794 /* Mail.swift */,
 				2FD60B042713EF3900D65794 /* NetworkManager.swift */,
 				2FD60AF42713D93C00D65794 /* Assets.xcassets */,
@@ -149,9 +163,11 @@
 				2FD60B022713EEB400D65794 /* Mail.swift in Sources */,
 				2FD60AF02713D93800D65794 /* MailController.swift in Sources */,
 				2FD60B052713EF3900D65794 /* NetworkManager.swift in Sources */,
+				2F0DCE1D2715527300C22236 /* MessageDetailsViewController.swift in Sources */,
 				2FD60AEC2713D93800D65794 /* AppDelegate.swift in Sources */,
 				2FD60AEE2713D93800D65794 /* SceneDelegate.swift in Sources */,
 				2F2D74A427140887003C1AE8 /* MessageCell.swift in Sources */,
+				2F5E139E2715339500F2894C /* DateFormatExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

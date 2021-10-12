@@ -17,3 +17,9 @@ struct Mail: Decodable {
         var timestamp: Double
     }
 }
+
+extension Mail.Message {
+    var subjectDisplay : String {
+        return subject.isEmpty ? "(No Subject)" : subject
+    }
+}
