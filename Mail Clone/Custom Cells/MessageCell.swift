@@ -21,7 +21,7 @@ class MessageCell: UITableViewCell {
             guard let message = message else { return }
             
             senderLabel.text = message.sender
-            subjectLabel.text = message.subject
+            subjectLabel.text = message.subjectDisplay
             bodyLabel.text = message.body
             timeLabel.text = message.timestamp.unixTimeStampAsDate
         }

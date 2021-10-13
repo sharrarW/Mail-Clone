@@ -86,21 +86,58 @@
             </objects>
             <point key="canvasLocation" x="763.768115942029" y="31.473214285714285"/>
         </scene>
-        <!--Message Details View Controller-->
+        <!--Title-->
         <scene sceneID="92X-TW-vgE">
             <objects>
                 <viewController id="ARa-it-GcW" customClass="MessageDetailsViewController" customModule="Mail_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQv-G5-dFc">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLV-Wn-J20">
+                                <rect key="frame" x="20" y="148" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="10:00 AM" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRV-Ff-XmC">
+                                <rect key="frame" x="20" y="181" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Body" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hqp-MW-lrP">
+                                <rect key="frame" x="20" y="228" width="374" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="8Cj-t2-1I8"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IRV-Ff-XmC" firstAttribute="leading" secondItem="vLV-Wn-J20" secondAttribute="leading" id="3Cd-5P-c0N"/>
+                            <constraint firstItem="8Cj-t2-1I8" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hqp-MW-lrP" secondAttribute="bottom" constant="8" id="D9w-0T-ayQ"/>
+                            <constraint firstItem="8Cj-t2-1I8" firstAttribute="trailing" secondItem="vLV-Wn-J20" secondAttribute="trailing" constant="20" id="DR9-65-Kuo"/>
+                            <constraint firstItem="vLV-Wn-J20" firstAttribute="leading" secondItem="8Cj-t2-1I8" secondAttribute="leading" constant="20" id="IrC-1T-R1H"/>
+                            <constraint firstItem="hqp-MW-lrP" firstAttribute="leading" secondItem="IRV-Ff-XmC" secondAttribute="leading" id="Mwa-hO-s7e"/>
+                            <constraint firstItem="IRV-Ff-XmC" firstAttribute="top" secondItem="vLV-Wn-J20" secondAttribute="bottom" constant="4" id="Oca-k1-9Cl"/>
+                            <constraint firstItem="hqp-MW-lrP" firstAttribute="trailing" secondItem="IRV-Ff-XmC" secondAttribute="trailing" id="XdA-LV-qdf"/>
+                            <constraint firstItem="hqp-MW-lrP" firstAttribute="top" secondItem="IRV-Ff-XmC" secondAttribute="bottom" constant="18" id="bDV-5A-qma"/>
+                            <constraint firstItem="vLV-Wn-J20" firstAttribute="top" secondItem="8Cj-t2-1I8" secondAttribute="top" constant="8" id="gSJ-ir-TDp"/>
+                            <constraint firstItem="IRV-Ff-XmC" firstAttribute="trailing" secondItem="vLV-Wn-J20" secondAttribute="trailing" id="tSj-dS-Tez"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pNK-4B-j1K"/>
+                    <navigationItem key="navigationItem" title="Title" id="pNK-4B-j1K"/>
+                    <connections>
+                        <outlet property="bodyLabel" destination="hqp-MW-lrP" id="oUc-Gh-duJ"/>
+                        <outlet property="subjectLabel" destination="vLV-Wn-J20" id="tjJ-lo-WzH"/>
+                        <outlet property="timeLabel" destination="IRV-Ff-XmC" id="iRo-mi-G2n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fsf-Vc-ULQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1633" y="31"/>
+            <point key="canvasLocation" x="1631.8840579710147" y="30.803571428571427"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ont-OF-DKv">
